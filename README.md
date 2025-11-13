@@ -63,8 +63,32 @@ A simple AI-powered trip planner using Gemini AI and Claude AI agents for resear
 
 ## ⚙️ Setup
 
-**Clone the repo**
-
-```bash
-git clone https://github.com/yourusername/ai-trip-planner.git
+# Clone the repo
+git clone https://github.com/alhumanoor1419/ai-trip-planner.git
 cd ai-trip-planner
+
+# Setup backend
+cd backend
+python -m venv .venv        # Create virtual environment
+
+# Activate environment
+# Mac/Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+export GEMINI_API_KEY=your_gemini_api_key
+export CLAUDE_API_KEY=your_claude_api_key
+
+# Run backend
+uvicorn main:app --reload
+
+# Setup frontend
+cd ../frontend
+npm install
+npm start
